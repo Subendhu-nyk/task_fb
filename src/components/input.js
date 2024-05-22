@@ -17,6 +17,17 @@ const Input = () => {
     ))}
     <div>
         {console.log('checkeditems',checkedItems)}
+        <div>
+        <h3>Selected Options:</h3>
+        <ul>
+          {Object.keys(checkedItems).map(
+            (item) =>
+              checkedItems[item] && (
+                <li key={item}>{item}</li>
+              )
+          )}
+        </ul>
+      </div>
     </div>
     </>
   )
